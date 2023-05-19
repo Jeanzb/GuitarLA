@@ -1,0 +1,33 @@
+@use '../custom' as *;
+@use '../utils/mixins';
+@use '../utils/animaciones' as *;
+
+.header {
+    @include mixins.background-image('../img/header.jpg');
+    position: relative;
+    .header-guitarrra {
+        display: none; 
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute; 
+            right: 0;
+            bottom: 0;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+            animation-timing-function: ease-in-out;
+            animation-name: animarImagen;
+        }
+    }
+
+    
+}
+
+.navegacion {
+    position: relative;
+    z-index: 100;
+    a {
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}

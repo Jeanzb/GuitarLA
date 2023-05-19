@@ -1,0 +1,7 @@
+@use '../utils/mixins';
+
+.cursos {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    @include mixins.background-image('../img/cursos_bg.jpg')
+}
